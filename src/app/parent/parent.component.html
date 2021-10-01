@@ -1,0 +1,17 @@
+<form [formGroup]="parentForm"><br><br>
+  <div>
+    <label for="firstName">First Name</label>&nbsp;
+    <input id="firstName" type="text" formControlName="firstName">
+    <small *ngIf=""></small>
+  </div><br>
+  <div>
+    <label for="lastName">First Name</label>&nbsp;
+    <input id="lastName" type="text" formControlName="lastName">
+  </div><br>
+  <div>
+    <label for="dob">Date of Birth</label>&nbsp;
+    <input id="dob" type="date" formControlName="dob">
+  </div><br>
+</form>
+<br><br>
+<app-child [parentFormData]="parentForm.value"></app-child>
